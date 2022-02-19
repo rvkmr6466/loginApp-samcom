@@ -1,0 +1,25 @@
+<div>
+    <div class="header">
+        <div class="heading">Users List</div>
+        <div class="logout">
+            <img class="userLoginImg" src="https://reqres.in/img/faces/1-image.jpg" />
+            <label for="" (click)="logout()">logout</label>
+        </div>
+    </div>
+    <br>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>email</th>
+        </tr>
+        <tr *ngFor="let user of usersObject">
+            <td>{{user['id']}}</td>
+            <td style="display: flex; ">
+                <img class="userImg" src="{{user['avatar']}}" />
+                <label for="">{{user['first_name']}} {{user['last_name']}}</label>
+            </td>
+            <td>{{user['email']}}</td>
+        </tr>
+    </table>
+</div>
